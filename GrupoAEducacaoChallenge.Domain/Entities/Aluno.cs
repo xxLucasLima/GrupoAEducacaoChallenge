@@ -32,8 +32,8 @@ namespace GrupoAEducacaoChallenge.Domain
         }
         public void ValidateDomain(string email, string name, int ra, string cpf)
         {
-            DomainExceptionValidation.When(IsValidEmail(email), "Invalid email.");
             DomainExceptionValidation.When(string.IsNullOrEmpty(email), "Invalid email. Email is required.");
+            DomainExceptionValidation.When(!IsValidEmail(email), "Invalid email.");
             DomainExceptionValidation.When(string.IsNullOrEmpty(name), "Invalid name. Name is required.");
             DomainExceptionValidation.When(ra <= 0, "Invalid Ra. Ra can not be 0.");
             DomainExceptionValidation.When(string.IsNullOrEmpty(cpf), "Invalid CPF. CPF is required.");
