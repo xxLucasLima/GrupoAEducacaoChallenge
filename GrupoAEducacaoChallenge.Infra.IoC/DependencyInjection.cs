@@ -1,14 +1,13 @@
-﻿using GrupoAEducacaoChallenge.Domain;
+﻿using GrupoAEducacaoChallenge.Application.Interfaces;
+using GrupoAEducacaoChallenge.Application.Mappings;
+using GrupoAEducacaoChallenge.Application.Services;
+using GrupoAEducacaoChallenge.Domain;
 using GrupoAEducacaoChallenge.Infra.Data.Context;
 using GrupoAEducacaoChallenge.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace GrupoAEducacaoChallenge.Infra.IoC
 {
@@ -21,6 +20,9 @@ namespace GrupoAEducacaoChallenge.Infra.IoC
                 b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
             services.AddScoped<IAlunoRepository, AlunoRepository>();
+            services.AddScoped<IAlunoService, AlunoService>();
+
+            services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
             return services;
         }
