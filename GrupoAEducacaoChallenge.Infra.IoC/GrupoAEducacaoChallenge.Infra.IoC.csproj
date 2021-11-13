@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GrupoAEducacaoChallenge.Application\GrupoAEducacaoChallenge.Application.csproj" />
     <ProjectReference Include="..\GrupoAEducacaoChallenge.Infra.Data\GrupoAEducacaoChallenge.Infra.Data.csproj" />
   </ItemGroup>
 
