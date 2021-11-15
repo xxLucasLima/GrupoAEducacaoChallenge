@@ -31,7 +31,7 @@ namespace GrupoAEducacaoChallenge.Infra.Data.Repositories
 
         public async Task<Aluno> GetByIdAsync(int? id)
         {
-            return await _alunoContext.Alunos.FindAsync(id);
+            return await _alunoContext.Alunos.AsNoTracking().Where(p=>p.Id == id).FirstOrDefaultAsync();
         }
 
         public async Task<Aluno> RemoveAsync(Aluno aluno)
