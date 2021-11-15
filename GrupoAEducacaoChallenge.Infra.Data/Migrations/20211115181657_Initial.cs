@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using MySql.EntityFrameworkCore.Metadata;
 
 namespace GrupoAEducacaoChallenge.Infra.Data.Migrations
 {
@@ -11,11 +12,11 @@ namespace GrupoAEducacaoChallenge.Infra.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Email = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
                     Ra = table.Column<int>(type: "int", nullable: false),
-                    CPF = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CPF = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

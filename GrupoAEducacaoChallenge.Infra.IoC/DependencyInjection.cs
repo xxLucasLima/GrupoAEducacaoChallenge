@@ -16,7 +16,7 @@ namespace GrupoAEducacaoChallenge.Infra.IoC
         public static IServiceCollection AddInfrastructure (this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
+                options.UseMySQL(configuration.GetConnectionString("DefaultMysqlConnection"),
                 b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
             services.AddScoped<IAlunoRepository, AlunoRepository>();
