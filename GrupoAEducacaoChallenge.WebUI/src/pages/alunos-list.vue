@@ -116,12 +116,6 @@
                     mdi-delete
                 </v-icon>
             </template>
-            <template v-slot:no-data>
-                <v-btn color="primary"
-                       @click="initialize">
-                    Reset
-                </v-btn>
-            </template>
         </v-data-table>
     </v-container>
 </template>
@@ -219,7 +213,7 @@
             deleteItemConfirm() {
                 this.alunos.splice(this.editedIndex, 1)
 
-                http.deleteAluno(this.editedItem.id, (res) => {
+                http.deleteAluno(this.editedItem.id, () => {
                     http.getAlunos((res) => {
                         this.alunos = res.data
                     }, (err) =>
@@ -255,7 +249,7 @@
 
                     if (this.editedItem.id == 0) {
 
-                        http.createAluno(this.editedItem, (res) => {
+                        http.createAluno(this.editedItem, () => {
                             http.getAlunos((res) => {
                                 this.alunos = res.data
                             }, (err) =>
@@ -267,7 +261,7 @@
                         this.close()
 
                     } else {
-                        http.updateAluno(this.editedItem, (res) => {
+                        http.updateAluno(this.editedItem, () => {
                             http.getAlunos((res) => {
                                 this.alunos = res.data
                             }, (err) =>
