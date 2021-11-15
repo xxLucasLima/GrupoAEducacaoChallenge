@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <v-navigation-drawer app v-model="drawer" permanent :mini-variant.sync="mini">
+        <v-navigation-drawer app v-model="drawer" permanent >
             <v-list>
                 <v-list-item>
                     <v-list-item-content>

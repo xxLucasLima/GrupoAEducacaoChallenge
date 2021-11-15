@@ -11,8 +11,8 @@
 
                     <template v-slot:append-outer>
 
-                        <v-btn v-bind="attrs" id="bt-cadastrar-alunos" large
-                               v-on="on" @click="newItem()">
+                        <v-btn id="bt-cadastrar-alunos" large
+                               @click="newItem()">
                             Cadastrar Aluno
 
                         </v-btn>
@@ -68,7 +68,7 @@
                                                    sm="6"
                                                    md="6">
                                                 <v-text-field v-model="editedItem.cpf" required
-                                                              :rules="cpflRule" v-mask="'###.###.###-##'"
+                                                              :rules="cpfRule" v-mask="'###.###.###-##'"
                                                               label="CPF"></v-text-field>
                                             </v-col>
                                         </v-row>
