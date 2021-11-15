@@ -34,6 +34,9 @@ namespace GrupoAEducacaoChallenge.WebAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GrupoAEducacaoChallenge.WebAPI", Version = "v1" });
             });
+
+            services.AddCors();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +49,7 @@ namespace GrupoAEducacaoChallenge.WebAPI
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GrupoAEducacaoChallenge.WebAPI v1"));
             }
 
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -56,6 +60,8 @@ namespace GrupoAEducacaoChallenge.WebAPI
             {
                 endpoints.MapControllers();
             });
+
+
         }
     }
 }

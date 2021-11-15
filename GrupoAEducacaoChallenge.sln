@@ -15,7 +15,7 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "GrupoAEducacaoChallenge.Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrupoAEducacaoChallenge.Domain.Tests", "GrupoAEducacaoChallenge.Domain.Tests\GrupoAEducacaoChallenge.Domain.Tests.csproj", "{34251527-2EE5-4C54-83BE-87AC860C5024}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrupoAEducacaoChallenge.WebAPI", "GrupoAEducacaoChallenge.WebAPI\GrupoAEducacaoChallenge.WebAPI.csproj", "{0CC048B6-9F5A-4FC6-AA21-AFF38B1186C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrupoAEducacaoChallenge.WebAPI", "GrupoAEducacaoChallenge.WebAPI\GrupoAEducacaoChallenge.WebAPI.csproj", "{0CC048B6-9F5A-4FC6-AA21-AFF38B1186C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

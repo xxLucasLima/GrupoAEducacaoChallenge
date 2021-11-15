@@ -32,9 +32,18 @@
     <Content Include="public\favicon.ico" />
     <Content Include="public\index.html" />
     <Content Include="src\App.vue" />
-    <Content Include="src\components\Home.vue" />
+    <Content Include="src\components\nav.vue" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="src\http\index.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\pages\alunos-list.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\router\index.js">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dist\" />
@@ -42,6 +51,11 @@
     <Folder Include="src\" />
     <Folder Include="src\assets\" />
     <Folder Include="src\components\" />
+    <Folder Include="src\http\" />
+    <Folder Include="src\modules\" />
+    <Folder Include="src\router\" />
+    <Folder Include="src\store\" />
+    <Folder Include="src\pages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="babel.config.js" />
