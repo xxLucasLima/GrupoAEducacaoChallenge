@@ -38,13 +38,13 @@ Desafio Para vaga de Desenvolvedor FullStack do Grupo A Educacao
   
 ## Lista de bibliotecas de terceiros utilizadas
   No backend foram tambem utilizados:
-    - AutoMapper  
-    - xUnit
+  - AutoMapper  
+  - xUnit
     
   No frontEnd foram tambem utilizados:
-    - axios  
-    - v-mask
-    - vue-router
+  - axios  
+  - v-mask
+  - vue-router
     
 ---------------------------------------------------------------------------------------
 ## O que você melhoraria se tivesse mais tempo
