@@ -51,3 +51,4 @@ Desafio Para vaga de Desenvolvedor FullStack do Grupo A Educacao
   - Adicionar mais classes de teste unitário
   - Implementar campo de busca de aluno
   - Utilizar no front end um gerenciador de estado (vuex)
+  - Tratamento de notificações na camada de apresentação
